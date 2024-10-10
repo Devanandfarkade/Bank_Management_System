@@ -22,52 +22,67 @@ public class SignupOne extends JFrame{
         
         JLabel name=new JLabel("Name : ");
         name.setFont(new Font("Raleway",Font.BOLD,20));
-        name.setBounds(100, 120, 100, 20);
+        name.setBounds(100, 120, 100, 30);
         add(name);
+        
+        JTextField nameTextField=new JTextField();
+        nameTextField.setFont(new Font("Raleway",Font.BOLD,14));
+        nameTextField.setBounds(300, 120, 400, 30);
+        add(nameTextField);
         
         JLabel fname=new JLabel("Father's Name : ");
         fname.setFont(new Font("Raleway",Font.BOLD,20));
-        fname.setBounds(100, 170, 200, 20);
+        fname.setBounds(100, 170, 200, 30);
         add(fname);
+        
+        JTextField fnameTextField=new JTextField();
+        fnameTextField.setFont(new Font("Raleway",Font.BOLD,14));
+        fnameTextField.setBounds(300, 120, 400, 30);
+        add(fnameTextField);
         
         JLabel dob=new JLabel("Date of Birth : ");
         dob.setFont(new Font("Raleway",Font.BOLD,20));
-        dob.setBounds(100, 220, 200, 20);
+        dob.setBounds(100, 220, 200, 30);
         add(dob);
         
         JLabel gender=new JLabel("Gender : ");
         gender.setFont(new Font("Raleway",Font.BOLD,20));
-        gender.setBounds(100, 270, 200, 20);
+        gender.setBounds(100, 270, 200, 30);
         add(gender);
         
         JLabel email=new JLabel("Email Address: ");
         email.setFont(new Font("Raleway",Font.BOLD,20));
-        email.setBounds(100, 320, 200, 20);
+        email.setBounds(100, 320, 200, 30);
         add(email);
+        
+        JTextField TextField=new JTextField();
+        fnameTextField.setFont(new Font("Raleway",Font.BOLD,14));
+        fnameTextField.setBounds(300, 120, 400, 30);
+        add(fnameTextField);
         
         JLabel marital=new JLabel("marital Status : ");
         marital.setFont(new Font("Raleway",Font.BOLD,20));
-        marital.setBounds(100, 370, 200, 20);
+        marital.setBounds(100, 370, 200, 30);
         add(marital);
         
         JLabel address=new JLabel("Address : ");
         address.setFont(new Font("Raleway",Font.BOLD,20));
-        address.setBounds(100, 420, 200, 20);
+        address.setBounds(100, 420, 200, 30);
         add(address);
         
         JLabel city=new JLabel("City : ");
         city.setFont(new Font("Raleway",Font.BOLD,20));
-        city.setBounds(100, 470, 200, 20);
+        city.setBounds(100, 470, 200, 30);
         add(city);
         
         JLabel state=new JLabel("State : ");
         state.setFont(new Font("Raleway",Font.BOLD,20));
-        state.setBounds(100, 520, 200, 20);
+        state.setBounds(100, 520, 200, 30);
         add(state);
         
         JLabel pinCode=new JLabel("PinCode : ");
         pinCode.setFont(new Font("Raleway",Font.BOLD,20));
-        pinCode.setBounds(100, 570, 200, 20);
+        pinCode.setBounds(100, 570, 200, 30);
         add(pinCode);
         
         getContentPane().setBackground(Color.WHITE);
