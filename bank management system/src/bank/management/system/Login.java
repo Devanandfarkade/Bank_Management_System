@@ -6,8 +6,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Login extends JFrame implements ActionListener{
+    
+    JButton login,signup,clear;
+    JTextField cardTextField;
+    JPasswordField pinTextField;
+    
     Login(){
-        setTitle("Automated Teller Machine");
+        setTitle("AUTOMATED TELLER MACHINE");
         setLayout(null);
         
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
@@ -22,40 +27,45 @@ public class Login extends JFrame implements ActionListener{
         text.setBounds(200, 40, 400, 40);
         add(text);
         
-         JLabel cardno=new JLabel("Card No:");
+        JLabel cardno=new JLabel("Card No:");
         cardno.setFont(new Font("Raleway",Font.BOLD,28));
         cardno.setBounds(120, 150, 150, 30);
         add(cardno);
         
-        JTextField cardTextField=new JTextField();
+        cardTextField=new JTextField();
         cardTextField.setBounds(300, 150 , 230 , 30 );
+        cardTextField.setFont(new Font("Arial", Font.BOLD,14));
         add(cardTextField);
         
-         JLabel pin=new JLabel("PIN:");
+        JLabel pin=new JLabel("PIN:");
         pin.setFont(new Font("Raleway",Font.BOLD,28));
         pin.setBounds(120, 220, 250, 30);
         add(pin);
         
-         JTextField pinTextField=new JTextField();
+        pinTextField=new JPasswordField();
         pinTextField.setBounds(300, 220 , 230 , 30 );
+        pinTextField.setFont(new Font("Arial", Font.BOLD,14));
         add(pinTextField);
         
-        JButton login=new JButton("SIGN IN");
+        login=new JButton("SIGN IN");
         login.setBounds(300, 300, 100, 30);
         login.setBackground(Color.BLACK);
         login.setForeground(Color.WHITE);
+        login.addActionListener(this);
         add(login);
         
-         JButton clear=new JButton("CLEAR");
+        clear=new JButton("CLEAR");
         clear.setBounds(430, 300, 100, 30);
         clear.setBackground(Color.BLACK);
         clear.setForeground(Color.WHITE);
+        clear.addActionListener(this);
         add(clear);
         
-         JButton signup=new JButton("SIGN UP");
+        signup=new JButton("SIGN UP");
         signup.setBounds(370, 350, 100, 30);
         signup.setBackground(Color.BLACK);
         signup.setForeground(Color.WHITE);
+        signup.addActionListener(this);
         add(signup);
         
         getContentPane().setBackground(Color.white);
@@ -63,7 +73,20 @@ public class Login extends JFrame implements ActionListener{
         setVisible(true);
         setLocation(300,120);
     }
-    public static void main(String[] args) {
-     new Login();
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource() ==clear){
+            cardTextField.setText("");
+            pinTextField.setText("");
+        }else if(ae.getSource() ==login){
+            
+        }else if(ae.getSource() ==signup){
+        
+        }
+    
     }
+    
+    
+//    public static void main(String[] args) {
+//     new Login();
+//    }
 }
