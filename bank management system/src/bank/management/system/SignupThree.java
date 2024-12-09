@@ -88,6 +88,13 @@ public class SignupThree extends JFrame{
         servicesReq.setBounds(100, 450, 250, 30);
         add(servicesReq);
         
+        
+        JLabel addition=new JLabel("Addition details well be here ");
+        addition.setFont(new Font("Railway",Font.ITALIC,12));
+        addition.setBounds(100, 480, 250, 30);
+        add(addition);
+        
+        
          setSize(850,820);// previous values --  850, 700 
         setLocation(350,5);
         setVisible(true);

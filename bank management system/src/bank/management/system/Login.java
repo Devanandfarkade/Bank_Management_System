@@ -88,7 +88,8 @@ public class Login extends JFrame implements ActionListener{
     
     
     public static void main(String[] args) {
-     //new Login();
-     new SignupThree();
+     new Login();
+     new SignupOne();
+     //new SignupThree();
     }
 }
