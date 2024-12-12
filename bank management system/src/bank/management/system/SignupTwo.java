@@ -183,7 +183,7 @@ public class SignupTwo extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae){
         
        
-        String sreligions=(String)religion.getSelectedItem();  //setText
+        String sreligions=(String)religion.getSelectedItem();  
         String scategory=(String) category.getSelectedItem();
         String sincome=(String)income.getSelectedItem();
         String seducation=(String) education.getSelectedItem();
