@@ -1,5 +1,6 @@
 package bank.management.system;
 
+
 import com.toedter.calendar.JDateChooser;
 import java.awt.*;
 import java.util.Random;
@@ -14,6 +15,7 @@ public class SignupOne extends JFrame implements ActionListener{
     JTextField nameTextField,fnameTextField,emailTextField,addTextField,cityTextField,stateTextField,pinTextField;
     JButton next;
     JRadioButton male,female,married,unMarried,other;
+    
     JDateChooser dateChooser;
     SignupOne(){
         setLayout(null);
@@ -137,6 +139,7 @@ public class SignupOne extends JFrame implements ActionListener{
         
         JLabel state=new JLabel("State : ");
         state.setFont(new Font("Raleway",Font.BOLD,20));
+        
         state.setBounds(100, 510, 200, 30);
         add(state);
         

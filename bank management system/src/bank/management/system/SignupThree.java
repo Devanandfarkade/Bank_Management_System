@@ -1,48 +1,64 @@
 
 package bank.management.system;
 
+import java.awt.Color;
+import java.util.*;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 
-public class SignupThree extends JFrame{
+
+public class SignupThree extends JFrame implements ActionListener{
     
     JRadioButton r1,r2,r3,r4;
+    JCheckBox c1,c2,c3,c4,c5,c6,c7;
+    JButton submit ,cancel;
+    String formno;
+    SignupThree(String formno){
+        this.formno=formno;
     
-    SignupThree(){
         setLayout(null);
          
        
         JLabel l1=new JLabel("Page 3 : Account Details");
         l1.setFont(new Font("Raleway",Font.BOLD,22));
-        l1.setBounds(290, 40, 400, 40);// previous values -- 290, 40, 400, 40
+        l1.setBounds(290, 40, 400, 40);
         add(l1);
         
          JLabel type=new JLabel("Account Type");
         type.setFont(new Font("Raleway",Font.BOLD,22));
-        type.setBounds(100, 130, 200, 30);//previous values -- 100, 140, 200, 30
+        type.setBounds(100, 130, 200, 30);
         add(type);
         
         r1=new JRadioButton("Saving Account");
         r1.setFont(new Font("Raleway",Font.BOLD,16));
+        r1.setBackground(Color.WHITE);
         r1.setBounds(100, 180, 200, 20);
         add(r1);
         
         
         r2=new JRadioButton("Fixed Deposit Account");
         r2.setFont(new Font("Raleway",Font.BOLD,16));
+        r2.setBackground(Color.WHITE);
         r2.setBounds(350, 180, 250, 20);
         add(r2);
         
         r3=new JRadioButton("Current Account");
         r3.setFont(new Font("Raleway",Font.BOLD,16));
+        r3.setBackground(Color.WHITE);
         r3.setBounds(100, 220, 150, 20);
         add(r3);
         
         r4=new JRadioButton("Recurring Deposite Account");
         r4.setFont(new Font("Raleway",Font.BOLD,16));
+        r4.setBackground(Color.WHITE);
         r4.setBounds(350, 220, 250, 20);
         add(r4);
         
@@ -69,7 +85,7 @@ public class SignupThree extends JFrame{
         
         
          JLabel pin=new JLabel("Pin:  ");
-        pin.setFont(new Font("Raleway",Font.BOLD,22));
+        pin.setFont(new Font("Raleway",Font.BOLD,22));  
         pin.setBounds(100, 370, 200, 30);
         add(pin);
         
@@ -83,21 +99,129 @@ public class SignupThree extends JFrame{
         pinDetails.setBounds(100, 400, 300, 20);
         add(pinDetails);
         
-         JLabel servicesReq=new JLabel("Services Required :  ");
-        servicesReq.setFont(new Font("Raleway",Font.BOLD,22));
-        servicesReq.setBounds(100, 450, 250, 30);
-        add(servicesReq);
+         JLabel services=new JLabel("Services Required :  ");
+        services.setFont(new Font("Raleway",Font.BOLD,22));
+        services.setBounds(100, 450, 250, 30);
+        add(services);
         
+        c1=new JCheckBox("ATM CARD");
+        c1.setBackground(Color.WHITE);
+        c1.setBounds(100, 500, 200, 30);
+        c1.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c1);
         
-        JLabel addition=new JLabel("Addition details well be here ");
-        addition.setFont(new Font("Railway",Font.ITALIC,12));
-        addition.setBounds(100, 480, 250, 30);
-        add(addition);
+        c2=new JCheckBox("Internet Banking");
+        c2.setBackground(Color.WHITE);
+        c2.setBounds(350, 500, 200, 30);
+        c2.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c2);
         
+        c3=new JCheckBox("Mobile Banking");
+        c3.setBackground(Color.WHITE);
+        c3.setBounds(100, 550, 200, 30);
+        c3.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c3);
         
-         setSize(850,820);// previous values --  850, 700 
+        c4=new JCheckBox("EMAIL & SMS Alert");
+        c4.setBackground(Color.WHITE);
+        c4.setBounds(350, 550, 200, 30);
+        c4.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c4);
+        
+        c5=new JCheckBox("Check Book");
+        c5.setBackground(Color.WHITE);
+        c5.setBounds(100, 600, 200, 30);
+        c5.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c5);
+        
+        c6=new JCheckBox("E-Statement");
+        c6.setBackground(Color.WHITE);
+        c6.setBounds(350, 600, 200, 30);
+        c6.setFont(new Font("Raleway",Font.BOLD,16));
+        add(c6);
+        
+        c7=new JCheckBox("I hereby declares that the above entered details are correct to thebest of my knowledge  ");
+        c7.setBackground(Color.WHITE);
+        c7.setBounds(100, 680, 600, 30);
+        c7.setFont(new Font("Raleway",Font.BOLD,12));
+        add(c7);
+        
+        submit=new JButton("Submit");
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.setFont(new Font("Raleway",Font.BOLD,14));
+        submit.setBounds(250, 720, 100, 30);
+        submit.addActionListener(this);
+        add(submit);
+                
+        
+        cancel=new JButton("Cancel");
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.setFont(new Font("Raleway",Font.BOLD,14));
+        cancel.setBounds(420, 720, 100, 30);
+        cancel.addActionListener(this);
+        add(cancel);
+        
+        getContentPane().setBackground(Color.WHITE);
+        
+         setSize(850,820);
         setLocation(350,5);
         setVisible(true);
+    }
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==submit){
+               String accountType=null;
+               if(r1.isSelected()){
+                   accountType="Saving Account";
+               }else if(r2.isSelected()){
+                   accountType="Fixed Deposite Account";
+               }else if(r3.isSelected()){
+                    accountType="Current Account";
+               }else if(r4.isSelected()){
+                   accountType="Reccuring Deposite Account";
+               }
+               
+               
+               Random random=new Random();
+               String cardNumber= "" + Math.abs((random.nextLong() % 90000000L)+ 5040936000000000L);
+               
+               String pinNumber="" + Math.abs((random.nextLong() % 9000L )+ 1000L);
+               String facility ="" ;
+               
+               if(c1.isSelected()){
+                   facility =facility + "ATM Card";         
+               }else if(c2.isSelected()){
+                   facility=facility + "Internet Banking "; 
+               }else if(c3.isSelected()){
+                   facility=facility + "Mobile Banking";
+               }else if(c4.isSelected()){
+                   facility=facility + "EMAIL & SMS Alert";
+               }else if(c5.isSelected()){
+                   facility=facility + "Check Book";
+               }else if(c6.isSelected()){
+                   facility=facility + "E-Statement";
+               }
+               
+               try{
+                   if(accountType.equals("")){
+                       JOptionPane.showMessageDialog(null, "Acccount Type is required ");
+                   }else{
+                       Conn conn=new Conn();
+                       String query1="insert into signupthree values('"+formno+"','"+accountType+"','"+cardNumber +"','"+pinNumber+"','"+facility+"')";
+                       conn.s.executeUpdate(query1);
+                       
+                       JOptionPane.showMessageDialog(null, "Card Number: " +cardNumber + "\n Pin: "+pinNumber);//showing user their card number and pin 
+                       String query2="insert into login values('"+formno+"','"+cardNumber +"','"+pinNumber+"')";
+                        conn.s.executeUpdate(query2);
+                   }
+               }catch(Exception e){
+                   System.out.println(e);
+               }
+        }else if(ae.getSource()== cancel){
+        
+        }
+    
     }
     
   
