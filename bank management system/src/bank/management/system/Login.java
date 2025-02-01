@@ -71,9 +71,8 @@ public class Login extends JFrame implements ActionListener{
         
         getContentPane().setBackground(Color.white);
         setSize(800, 480);
-        setLocation(550,200);
         setVisible(true);
-        
+        setLocation(300,120);
     }
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() ==clear){
@@ -92,7 +91,6 @@ public class Login extends JFrame implements ActionListener{
                 }else{
                     JOptionPane.showMessageDialog(null, "Incorrect Card Number or pin ");
                 }
-                
             }catch(Exception e){
                 System.out.println(e);
             }
@@ -105,7 +103,7 @@ public class Login extends JFrame implements ActionListener{
     
     
     public static void main(String[] args) {
-        new Login();
-//     new SignupThree("");
+    new Login();
+   // new SignupThree("");
     }
 }
