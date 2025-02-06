@@ -1,4 +1,7 @@
 
+
+
+
 package bank.management.system;
 
 import java.awt.Color;
@@ -14,13 +17,17 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-public class Deposite extends JFrame implements ActionListener{
+/**
+ *
+ * @author Devanand
+ */
+public class Withdrawl extends JFrame implements ActionListener{
     
     JTextField amount;
-    JButton deposite,back;
+    JButton withdrawl,back;
     String pinnumber;
     
-    Deposite(String pinnumber){
+    Withdrawl(String pinnumber){
         
         this.pinnumber=pinnumber;
         setLayout(null);
@@ -33,7 +40,7 @@ public class Deposite extends JFrame implements ActionListener{
             add(image);
             
             
-            JLabel text=new JLabel("Enter the amount you want to Deposite");
+            JLabel text=new JLabel("Enter the amount you want to withdrawl");
             text.setForeground(Color.WHITE);
             text.setFont(new Font("System",Font.BOLD,16));
             text.setBounds(170, 300, 400, 20);
@@ -44,10 +51,10 @@ public class Deposite extends JFrame implements ActionListener{
             amount.setBounds(170, 350, 320, 25);
             image.add(amount);
             
-            deposite=new JButton("Deposite");
-            deposite.setBounds(355, 485, 150, 30);
-            deposite.addActionListener(this);
-            image.add(deposite);
+            withdrawl=new JButton("Withdraw");
+            withdrawl.setBounds(355, 485, 150, 30);
+            withdrawl.addActionListener(this);
+            image.add(withdrawl);
             
             back=new JButton("Back");
             back.setBounds(355, 520, 150, 30);
@@ -64,17 +71,17 @@ public class Deposite extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==deposite){
+        if(ae.getSource()==withdrawl){
             String number=amount.getText();
             Date date=new Date();
             if(number.equals("")){
-                JOptionPane.showMessageDialog(null, "Please Enter the amount you want to deposite");
+                JOptionPane.showMessageDialog(null, "Please Enter the amount you want to withdrawl");
             }else{
                 try{
                 Conn conn=new Conn();
-                String query="insert into bank values('"+pinnumber+"','"+date+"','Deposite','"+number+"') ";
+                String query="insert into bank values('"+pinnumber+"','"+date+"','withdrawl','"+number+"') ";
                 conn.s.executeUpdate(query);
-                JOptionPane.showMessageDialog(null, "Rs "+number+"Deposite Successfully");
+                JOptionPane.showMessageDialog(null, "Rs "+number+"withdrawl Successfully");
                 setVisible(false);
                 new Transactions(pinnumber).setVisible(true);
                 }catch(Exception e){
@@ -89,6 +96,6 @@ public class Deposite extends JFrame implements ActionListener{
         }    
     } 
 //     public static void main(String[] args) {
-//        new Deposite("");
+//        new withdrawl("");
 //    }
 }
