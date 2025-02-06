@@ -1,9 +1,8 @@
-
-
-
-
 package bank.management.system;
-
+/**
+ *
+ * @author Devanand Farkade 
+ */
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -17,10 +16,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Devanand
- */
+
 public class Withdrawl extends JFrame implements ActionListener{
     
     JTextField amount;

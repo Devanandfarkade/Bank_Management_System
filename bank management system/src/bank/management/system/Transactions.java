@@ -1,5 +1,8 @@
-
 package bank.management.system;
+/**
+ *
+ * @author Devanand Farkade 
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -76,6 +79,13 @@ public class Transactions extends JFrame implements ActionListener{
         }else if(ae.getSource()==withdrawl){
             setVisible(false);
             new Withdrawl(pinnumber).setVisible(true);
+        } else if(ae.getSource()== fastCash){
+            setVisible(false);
+            new FastCash(pinnumber).setVisible(true);
+        }else if(ae.getSource() == pinChange){
+            setVisible(false);
+            new PinChange(pinnumber).setVisible(true);
+        
         }
       }
     
