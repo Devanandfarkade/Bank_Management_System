@@ -1,6 +1,9 @@
 
 package bank.management.system;
-
+/**
+ *
+ * @author Devanand Farkade 
+ */
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -14,10 +17,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import java.util.Date;
 
-/**
- *
- * @author Devanand Farkade 
- */
+
 
 
 public class FastCash extends JFrame implements ActionListener{
