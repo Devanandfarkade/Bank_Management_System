@@ -8,7 +8,7 @@ The **Bank Management System** is a **secure, efficient, and user-friendly** app
    ```bash
    git clone https://github.com/yourusername/Bank-Management-System.git
 
-## 🔧 Important files   
+## 🌐 Important files   
 2. **Download all needed files from here**  
    ```bash
    https://drive.google.com/drive/folders/1IpvOAWL6kERJtlgb0FsflgwzS9OTb10T?usp=drive_link
